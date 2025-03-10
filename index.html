@@ -3,33 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自我介紹</title>
+    <title>我的簡歷</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
+            margin: 40px;
+            line-height: 1.6;
         }
         h1 {
             color: #007BFF;
         }
-        p {
-            font-size: 18px;
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
         }
     </style>
 </head>
 <body>
 
 <?php
-$name = "";
-$age = 20;
-$hobby = "打遊戲和寫程式";
+$name = "康君緯";
+$email = "eric94010335@gmail.com"; 
+$phone = "0903-525-153"; 
+
+
+    ["school" => "國立台東大學", "degree" => "綠能與資訊學系", "years" => "2023 - 2027"]
+];
 ?>
 
-<h1>自我介紹</h1>
-<p>姓名: <?php echo $name; ?></p>
-<p>年齡: <?php echo $age; ?> 歲</p>
-<p>興趣: <?php echo $hobby; ?></p>
+<h1><?php echo $name; ?> 的簡歷</h1>
+
+<div class="section">
+    <h2>基本資料</h2>
+    <p><strong>職稱：</strong> <?php echo $job_title; ?></p>
+    <p><strong>Email：</strong> <?php echo $email; ?></p>
+    <p><strong>電話：</strong> <?php echo $phone; ?></p>
+</div>
+
+<div class="section">
+    <h2>技能</h2>
+    <ul>
+        <?php foreach ($skills as $skill) {
+            echo "<li>$skill</li>";
+        } ?>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>工作經驗</h2>
+    <?php foreach ($experience as $job) { ?>
+        <p><strong><?php echo $job["company"]; ?></strong> - <?php echo $job["position"]; ?> (<?php echo $job["years"]; ?>)</p>
+    <?php } ?>
+</div>
+
+<div class="section">
+    <h2>學歷</h2>
+    <?php foreach ($education as $edu) { ?>
+        <p><strong><?php echo $edu["school"]; ?></strong> - <?php echo $edu["degree"]; ?> (<?php echo $edu["years"]; ?>)</p>
+    <?php } ?>
+</div>
 
 </body>
 </html>
