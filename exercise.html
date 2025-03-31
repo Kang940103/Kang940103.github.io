@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的自傳</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f5f5f5; color: #333; }
+        h1 { color: darkblue; font-variant: small-caps; }
+        h1::before, h1::after { content: "✨"; color: gold; }
+        h2 { font-variant: small-caps; }
+        p[data-highlight="true"] { color: orange; font-weight: bold; }
+        p::first-letter { font-size: 2em; font-weight: bold; color: darkblue; }
+        a:visited { color: gray; }
+        a:hover { color: red; text-decoration: underline; }
+        p:first-of-type { font-weight: bold; }
+        ::selection { background-color: yellow; color: black; }
+        button { background-color: gray; color: white; border: none; padding: 10px; }
+        button:hover { background-color: green; }
+        table { border-collapse: collapse; }
+        input[type="text"] { background-color: lightblue; font-size: 16px; }
+        input[required] { border: 2px solid red; }
+    </style>
+</head>
+<body>
+
+    <!-- 頁內導航 -->
+    <nav>
+        <ul>
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#hobbies">我的興趣</a></li>
+            <li><a href="#skills">我的技能</a></li>
+            <li><a href="#contact">聯絡方式</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="top">我的自傳</h1>
+
+    <h2 id="about">關於我</h2>
+    <p data-highlight="true">你好，我叫○○，是一名熱愛科技的學生。</p>
+    <p>我對前端開發充滿熱情，並且喜歡探索新的技術。</p>
+
+    <h2 id="hobbies">我的興趣</h2>
+    <ul>
+        <li>寫程式</li>
+        <li>閱讀技術書籍</li>
+        <li>旅行與攝影</li>
+    </ul>
+
+    <h2 id="skills">我的技能</h2>
+    <table>
+        <tr>
+            <th>技能</th>
+            <th>熟練度</th>
+        </tr>
+        <tr>
+            <td>HTML & CSS</td>
+            <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>⭐⭐⭐</td>
+        </tr>
+    </table>
+
+    <h2 id="contact">聯絡方式</h2>
+    <form>
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">電子郵件：</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button type="submit">送出</button>
+    </form>
+
+    <!-- 回到頂部 -->
+    <p><a href="#top">回到頂部</a></p>
+
+    <footer>
+        <p>© 2025 我的自傳. All rights reserved. <a href="#">隱私政策</a></p>
+    </footer>
+
+</body>
+</html>
+
